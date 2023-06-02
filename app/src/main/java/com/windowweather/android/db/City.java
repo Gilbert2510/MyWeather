@@ -1,6 +1,8 @@
 package com.windowweather.android.db;
 
-public class City {     //市
+import org.litepal.crud.LitePalSupport;
+
+public class City extends LitePalSupport {     //市
     private int id;     //市ID
     private String cityName;    //市名
     private int cityCode;       //市代号

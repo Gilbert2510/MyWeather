@@ -1,9 +1,11 @@
 package com.windowweather.android.db;
 
-public class County {   //县（区）
+import org.litepal.crud.LitePalSupport;
+
+public class County extends LitePalSupport {   //县（区）
     private int id;     //县（区）ID
     private String countyName;      //县（区）名
-    private int weatherId;          //天气ID
+    private String weatherId;          //天气ID
     private int cityId;             //所属市ID
 
     public int getId() {
@@ -22,11 +24,11 @@ public class County {   //县（区）
         this.countyName = countyName;
     }
 
-    public int getWeatherId() {
+    public String getWeatherId() {
         return weatherId;
     }
 
-    public void setWeatherId(int weatherId) {
+    public void setWeatherId(String weatherId) {
         this.weatherId = weatherId;
     }
 

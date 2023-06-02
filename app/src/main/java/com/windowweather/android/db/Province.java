@@ -1,6 +1,8 @@
 package com.windowweather.android.db;
 
-public class Province {     //省
+import org.litepal.crud.LitePalSupport;
+
+public class Province extends LitePalSupport {     //省
     private int id;     //省ID
     private String provinceName;    //省名
     private int provinceCode;       //省代号
