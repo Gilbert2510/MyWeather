@@ -2,17 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <permission android:name="android.permission.INTERNET"
-        tools:ignore="ReservedSystemPermission" />
-    <permission android:name="android.permission.ACCESS_FINE_LOCATION"
-        tools:ignore="ReservedSystemPermission" />
-    <permission android:name="android.permission.READ_PHONE_STATE"
-        tools:ignore="ReservedSystemPermission" />
-    <permission android:name="android.permission.ACCESS_WIFI_STATE"
-        tools:ignore="ReservedSystemPermission" />
+    <uses-permission android:name="android.permission.INTERNET" />
     
     <application
         android:name="org.litepal.LitePalApplication"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
