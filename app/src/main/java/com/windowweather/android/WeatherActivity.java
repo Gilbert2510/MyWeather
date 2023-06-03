@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -28,6 +29,7 @@ import android.widget.Toast;
 
 import com.windowweather.android.gson.Forecast;
 import com.windowweather.android.gson.Weather;
+import com.windowweather.android.service.AutoUpdateService;
 import com.windowweather.android.util.HttpUtil;
 import com.windowweather.android.util.Utility;
 
@@ -189,6 +191,8 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent=new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
     static void translucentStatusBar(Activity activity, boolean hideStatusBarBackground) {      //状态栏和背景融合
